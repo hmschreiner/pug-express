@@ -1,0 +1,12 @@
+extends layout.pug
+
+block head
+    title Posts
+block content
+    .container
+        h1.mt-5 Posts
+
+        ul.list-unstyled
+            each post in posts
+                include mixins/posts
+                +post(post)
